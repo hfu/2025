@@ -2,6 +2,6 @@ remote_theme: pages-themes/slate@v0.2.0
 plugins:
 - jekyll-remote-theme
 title: UNVT POD, QMP and Fusion
-description: project concepts for summer and winter of 2025
+description: Project concepts for summer and winter of 2025
 github:
   is_project_page: false
