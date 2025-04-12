@@ -97,8 +97,3 @@ In addition to data from UNVT POD and QMP, Fusion aims to integrate vector tile 
 * **Sharing of Needs**: QMP activities can address specific map needs in areas where UNVT POD is deployed. QMP can also help in the selection of data for integration in Fusion. This will enhance the practicality of UNVT POD and Fusion, and contribute to the well-being of local residents.
 * **Flexible Data Utilization**: The Fusion concept, in conjunction with UNVT POD and QMP, enables users to combine PMTiles from various entities, based on client needs. This will allow users to obtain optimal map information.
 
----
-Annotations: 0,6312 SHA-256 5bdabc4ec7806f96054df0db8688a10f  
-&AI:   
-@Hidennori Fujimura <hfu>: 1216,2 1228 1264,2 1457 1467,2 1509,2 1517,4 1612 1707 1722 1766 2020 2027 2065 2263 2269 2296 2542 2546 2569 2722,2 2727 2758 2921,2 2925 2949 3148 3151 3173  
-...
