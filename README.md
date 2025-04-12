@@ -1,97 +1,104 @@
-# UNVT POD, QMP, and Fusion
+# UNVT POD, QMP, and Fusion Initiatives
 
-This document describes the UNVT POD (United Nations Vector Tile Toolkit Portable Option D), QMP (Quick Mapping Project), and Fusion initiatives, planned for the summer and winter of 2025 by the Smart Maps Group of the UN Open GIS Initiative. Through these projects, we aim to improve map utilization in resource-constrained environments, rapidly enhance maps through OpenStreetMap (OSM), and integrate diverse data sources.
+The Smart Maps Group of the UN Open GIS Initiative is planning the UNVT POD, QMP, and Fusion initiatives for the summer and winter of 2025. These projects aim to enhance map usability in areas with limited resources, enable rapid map improvements through OpenStreetMap (OSM), and integrate various data sources.
 
 ## UNVT POD: United Nations Vector Tile Toolkit Portable Option D
 
 ### Purpose of UNVT POD
 
-To provide map access to users with limited resources who require the latest cloud-native technologies in environments with unstable or unavailable internet connections.
+UNVT POD aims to provide map access to users with limited resources, utilizing the latest cloud-native technologies in environments with unstable or unavailable internet connections.
 
 ### Technical Concept
 
-### Features of UNVT POD
+UNVT POD is designed as a portable and self-contained system that can function offline. It will use the latest vector tile technology and is intended to be cost-effective to build and operate, supporting one to four users per unit.
+
+### Key Features of UNVT POD
 
 * Portable and self-contained system
 * Usable in offline environments
-* Utilizes the latest vector tile technology
+* Based on the latest vector tile technology
 * Low cost to build and operate
-* Designed for one to four users per unit
+* Designed for small groups of users (1-4 per unit)
 
-### Tools used
+### Tools Used
 
-#### geospatial
+The following tools will be used in the development of UNVT POD:
 
-* [Tippecanoe](https://github.com/felt/tippecanoe) - A tool to build vector tile sets from large (or small) collection of GeoJSON, FlatGeobuf, or CSV features.
-    * Reasoning: Proven, high-performance tool for efficient vector tile generation.
-* [go-pmtiles](https://github.com/protomaps/go-pmtiles)
-    * Reasoning: Library for efficient processing of PMTiles format data, with high performance expected from Go language.
+#### Geospatial
 
-#### web frontend
+* [Tippecanoe](https://github.com/felt/tippecanoe): This tool will be used to build vector tilesets from GeoJSON, FlatGeobuf, or CSV data.
+    * Reasoning: Tippecanoe is a proven, high-performance tool for efficient vector tile generation.
+* [go-pmtiles](https://github.com/protomaps/go-pmtiles): This tool will be used for efficient processing of PMTiles data.
+    * Reasoning: go-pmtiles provides high performance due to the efficiency of the Go programming language.
 
-* [MapLibre GL JS](https://maplibre.org/maplibre-gl-js-docs/) - A JavaScript library for displaying interactive maps in web browsers.
-    * Reasoning: High performance and flexibility, enabling modern map representations. Open-source with active community development.
+#### Web Frontend
 
-#### web backend
+* [MapLibre GL JS](https://maplibre.org/maplibre-gl-js/docs/): This JavaScript library will be used to display interactive maps in web browsers.
+    * Reasoning: MapLibre GL JS offers high performance and flexibility for modern map representations. It is open-source, with an active community.
 
-* [Martin](https://github.com/maplibre/martin) - A high-performance server for serving vector tiles.
-    * Reasoning: High performance and scalability, suitable for cloud-native environments.
-* [Caddy](https://caddyserver.com/) - A powerful, adaptable, and easy-to-use web server.
-    * Reasoning: Modern web server features such as automatic HTTPS and ease of configuration, reducing operational costs.
+#### Web Backend
 
+* [Martin](https://[github.com/maplibre/martin): This server will be used to serve vector tiles with high performance.
+    * Reasoning: Martin is designed for high performance and scalability, making it suitable for cloud-native environments.
+* [Caddy](https://caddyserver.com/): This web server will be used for its power, adaptability, and ease of use.
+    * Reasoning: Caddy offers modern web server features, such as automatic HTTPS and simplified configuration, which helps to reduce operational costs.
 
-#### system
+#### System
 
-* [Git](https://git-scm.com/) - A distributed version control system.
-    * Reasoning: Essential tool for development version control, collaboration, and backups.
-* [tmux](https://github.com/tmux/tmux) - A terminal multiplexer.
-    * Reasoning: Efficiently manages multiple terminal sessions, streamlining development and operations.
-* [Pkl](https://pkl-lang.org/) - Configuration that is Programmable, Scalable, and Safe. 
-    * Reasoning: MapLibre Style description, a map styling configuration in JSON for vector tile, is complex in many cases. We use the Pkl language to nicely manage the complexity of the style description. 
-* [jq](https://jqlang.org/) - A lightweight and flexible command-line JSON processor
-    * Reasoning: Versatile and powerful tool for efficient processing of JSON data.
+* [Git](https://git-scm.com/): This distributed version control system will be used.
+    * Reasoning: Git is essential for development version control, collaboration, and backups.
+* [tmux](https://github.com/tmux/tmux): This terminal multiplexer will be used.
+    * Reasoning: tmux helps to efficiently manage multiple terminal sessions, streamlining development and operations.
+* [Pkl](https://pkl-lang.org/): This configuration language, which is programmable, scalable, and safe, will be used.
+    * Reasoning: MapLibre style descriptions (in JSON) can be complex. Pkl will help manage this complexity.
+* [jq](https://jqlang.org/): This lightweight and flexible command-line JSON processor will be used.
+    * Reasoning: jq is a versatile and powerful tool for efficient processing of JSON data.
 
 ## QMP (Quick Mapping Project)
 
 ### Purpose of QMP
 
-To rapidly respond to specific map enhancement needs through OpenStreetMap (OSM).
+The Quick Mapping Project (QMP) aims to enable rapid responses to specific map enhancement needs using OpenStreetMap (OSM).
 
 ### Technical Concept
 
-#### Proposed Process
+The proposed process for QMP is as follows:
 
-1.  Requests to add to or modify a map in a specific area are registered on GitHub Issues.
-2.  The tag #qmp is added to the OSM changeset. [Rapid](https://rapideditor.org/) might be a tool of choice for mapping. 
-
-#### Features
+1.  Requests to add or modify map data in a specific area will be registered on GitHub Issues.
+2.  The tag #qmp will be added to the OSM changeset. The [Rapid](https://rapideditor.org/) editor may be used for mapping.
 
 ### Handling as OpenStreetMap Organized Editing
 
-* QMP may fall under the category of OSM Organized Editing.
-* Depending on the project's scale and impact, it may be necessary to reach an agreement with the OSM community in advance.
-* This project aims to promote casual participation while respecting OSM community guidelines and considering appropriate procedures as needed.
+* QMP may be categorized as an OSM Organized Editing activity.
+* Depending on the project's scope and impact, it might be necessary to coordinate with the OSM community beforehand.
+* This project seeks to encourage broad participation while adhering to OSM community guidelines and establishing appropriate procedures as needed.
 
 ## Fusion: Integration of Vector Tile Data
 
 ### Purpose of Fusion
 
-In addition to data generated and provided by UNVT POD and QMP, Fusion aims to integrate vector tile data from various public organizations and projects to provide more comprehensive map information that meets user needs.
+In addition to data from UNVT POD and QMP, Fusion aims to integrate vector tile data from various public organizations and projects. This will provide more comprehensive map information to meet diverse user needs.
 
 ### Technical Concept
 
-* **Integration of Diverse Data Sources**: Utilize vector tile data provided by public organizations such as the Geographical Survey Institute of Japan (GSI) and GISTDA (Thailand).
-* **Flexible Data Selection on the Client-Side**: Construct a system that allows users to freely combine necessary data layers according to their needs.
-* **Utilization of PMTiles**: Efficiently distribute and utilize vector tile data from different sources in PMTiles format.
+* **Integration of Diverse Data Sources**: Fusion will utilize vector tile data from public organizations, such as the Geographical Survey Institute of Japan (GSI) and GISTDA (Thailand).
+* **Flexible Data Selection on the Client-Side**: The system will allow users to freely combine necessary data layers based on their specific requirements.
+* **Utilization of PMTiles**: PMTiles format will be used to efficiently distribute and utilize vector tile data from different sources.
 
-### Features of Fusion
+### Key Features of Fusion
 
-* **Comprehensive Map Information**: By combining multiple data sources, Fusion provides detailed and multifaceted information that cannot be obtained from a single data source.
-* **Adaptability to User Needs**: Users can freely select and customize data according to their intended use.
-* **Collaboration Between Public and Private Data**: Combining reliable data provided by public organizations with open data such as OSM improves data quality and freshness.
+* **Comprehensive Map Information**: By combining multiple data sources, Fusion will offer detailed and multifaceted information that may not be available from a single source.
+* **Adaptability to User Needs**: Users will be able to select and customize data according to their intended use.
+* **Collaboration Between Public and Private Data**: Combining reliable data from public organizations with open data, such as OSM, can improve data quality and freshness.
 
 ## Synergistic Effects of UNVT POD, QMP, and Fusion
 
-* **Data Provision**: OSM data updated and improved by QMP can be provided not only as vector tile data available for UNVT POD, but also utilized as a data source for Fusion. This allows the results of QMP activities to be used in environments with limited internet connectivity, and by a wider range of users.
-* **Sharing of Needs**: QMP activities can be based on specific map needs in the areas where UNVT POD is deployed, and can also be useful in selecting data for integration in Fusion. This enhances the practicality of UNVT POD and Fusion, and contributes to the lives of local residents.
-* **Flexible Data Utilization**: The Fusion concept, in addition to UNVT POD and QMP, enables the free combination of PMTiles provided by various entities according to client needs. This allows users to obtain optimal map information.
+* **Data Provision**: OSM data that is updated and improved through QMP can be provided as vector tile data for UNVT POD and also used as a data source for Fusion. This allows QMP results to be used in environments with limited internet connectivity and by a wider range of users.
+* **Sharing of Needs**: QMP activities can address specific map needs in areas where UNVT POD is deployed. QMP can also help in the selection of data for integration in Fusion. This will enhance the practicality of UNVT POD and Fusion, and contribute to the well-being of local residents.
+* **Flexible Data Utilization**: The Fusion concept, in conjunction with UNVT POD and QMP, enables users to combine PMTiles from various entities, based on client needs. This will allow users to obtain optimal map information.
+
+---
+Annotations: 0,6312 SHA-256 5bdabc4ec7806f96054df0db8688a10f  
+&AI:   
+@Hidennori Fujimura <hfu>: 1216,2 1228 1264,2 1457 1467,2 1509,2 1517,4 1612 1707 1722 1766 2020 2027 2065 2263 2269 2296 2542 2546 2569 2722,2 2727 2758 2921,2 2925 2949 3148 3151 3173  
+...
