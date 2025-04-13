@@ -2,6 +2,8 @@
 
 The Smart Maps Group of the UN Open GIS Initiative is planning the UNVT POD, QMP, and Fusion initiatives for the summer and winter of 2025. These projects aim to enhance map usability in areas with limited resources, enable rapid map improvements through OpenStreetMap (OSM), and integrate various data sources.
 
+We have a [scratchpad](https://hackmd.io/@smartmaps/2025) for the project on HackMD. 
+
 ## UNVT POD: United Nations Vector Tile Toolkit Portable Option D
 
 ### Purpose of UNVT POD
